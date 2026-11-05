@@ -10,8 +10,8 @@
 
   /* old links (#quests, #hire, #about, ...) -> current section ids */
   var alias = {
-    quests: "work",
-    projects: "work",
+    quests: "projects",
+    work: "projects",
     overview: "stack",
     about: "top",
     journey: "experience",

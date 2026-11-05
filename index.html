@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@1&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
     <script>
@@ -79,50 +79,75 @@
     </svg>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none" aria-hidden="true">
       <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M8 7h9v9"/></symbol>
-      <symbol id="i-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
       <symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></g></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></g></symbol>
+      <symbol id="i-doc" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></g></symbol>
       <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></symbol>
       <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></symbol>
     </svg>
 
-    <div class="progress" id="pg" aria-hidden="true"></div>
-    <a class="skip" href="#main">Skip to content</a>
+    <a class="skip" href="#work">Skip to content</a>
 
-    <header class="nav" id="nav">
-      <a class="brand" href="#top" aria-label="Back to top">ST</a>
-      <nav class="links" id="links" aria-label="Main">
-        <span class="pill-ind" id="ind" aria-hidden="true"></span>
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="#certs"><span class="long">Certificates</span><span class="short">Certs</span></a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <button class="theme" id="th" type="button" aria-label="Toggle dark mode">
-        <svg class="ico sun" aria-hidden="true"><use href="#i-sun" /></svg>
-        <svg class="ico moon" aria-hidden="true"><use href="#i-moon" /></svg>
-      </button>
-    </header>
+    <div class="layout">
+      <!-- ============ LEFT: name, about, nav ============ -->
+      <div class="side" id="top">
+        <div class="intro">
+          <div class="intro-top">
+            <p class="status"><i></i>Open to internships · Summer 2027</p>
+            <button
+              class="theme"
+              id="th"
+              type="button"
+              aria-label="Toggle dark mode"
+            >
+              <svg class="ico sun" aria-hidden="true"><use href="#i-sun" /></svg>
+              <svg class="ico moon" aria-hidden="true"><use href="#i-moon" /></svg>
+            </button>
+          </div>
 
-    <main id="main">
-      <!-- HERO -->
-      <section class="hero wrap" id="top">
-        <p class="status rv"><i></i>Open to internships · Summer 2027</p>
-        <h1 class="split">
-          Hi, I’m Shane. I build <em>clean, practical</em> web apps.
-        </h1>
-        <p class="lead rv">
-          Computer Science student at Negros Oriental State University. I learn
-          best by building and shipping complete projects. My latest is a
-          campus marketplace that’s now live.
-        </p>
-        <div class="acts rv">
-          <a class="btn p" href="#work"
-            >See my work
-            <svg class="ico go r" aria-hidden="true"><use href="#i-right" /></svg
-          ></a>
+          <div class="id">
+            <figure class="photo rv">
+              <img
+                src="img/me.jpg"
+                alt="Portrait of Shane Taclob"
+                width="320"
+                height="400"
+                onerror="this.remove()"
+              />
+              <span class="photo-ph" aria-hidden="true">ST</span>
+            </figure>
+            <h1 class="name">
+              <span class="letters">Shane</span>
+              <span class="letters last">Taclob</span>
+            </h1>
+          </div>
+          <p class="role rv">Computer Science student &amp; web developer</p>
+          <p class="bio rv">
+            I study at Negros Oriental State University and learn best by
+            building. Focused on clean architecture, strong fundamentals, and
+            shipping complete projects, like a campus marketplace that’s now
+            live.
+          </p>
+          <p class="here rv">
+            Central Visayas, PH<span class="clock" id="clock" hidden></span>
+          </p>
+        </div>
+
+        <nav class="links" id="links" aria-label="Sections">
+          <a href="#work"><span class="n">01</span><span class="bar"></span>Work</a>
+          <a href="#stack"><span class="n">02</span><span class="bar"></span>Stack</a>
+          <a href="#certs"
+            ><span class="n">03</span><span class="bar"></span
+            ><span class="long">Certificates</span
+            ><span class="short">Certs</span></a
+          >
+          <a href="#experience"><span class="n">04</span><span class="bar"></span>Experience</a>
+          <a href="#contact"><span class="n">05</span><span class="bar"></span>Contact</a>
+        </nav>
+
+        <div class="side-foot rv">
           <button
-            class="btn"
+            class="chip"
             id="cp"
             type="button"
             data-mail="s19571732@gmail.com"
@@ -130,174 +155,161 @@
             <svg class="ico" aria-hidden="true"><use href="#i-copy" /></svg
             ><span>Copy email</span>
           </button>
-          <a class="btn ghost" href="#" target="_blank" rel="noopener"
-            >Resume
-            <svg class="ico go" aria-hidden="true"><use href="#i-arrow" /></svg
+          <a class="chip" href="#" target="_blank" rel="noopener"
+            ><svg class="ico" aria-hidden="true"><use href="#i-doc" /></svg
+            >Resume</a
+          >
+          <a
+            class="chip icon"
+            href="https://github.com/shincodez"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            title="GitHub"
+            ><svg class="ico" aria-hidden="true"><use href="#i-github" /></svg
+          ></a>
+          <a
+            class="chip icon"
+            href="https://www.linkedin.com/in/shanefrancistaclob"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            title="LinkedIn"
+            ><svg class="ico" aria-hidden="true"><use href="#i-linkedin" /></svg
           ></a>
         </div>
+      </div>
 
-        <dl class="facts rv">
-          <div><dt>Studying</dt><dd>B.S. Computer Science</dd></div>
-          <div><dt>Based in</dt><dd>Central Visayas, PH</dd></div>
-          <div><dt>Looking for</dt><dd>First internship / OJT</dd></div>
-          <div><dt>Works with</dt><dd>JS · Python · React · PHP</dd></div>
-        </dl>
-      </section>
+      <!-- ============ RIGHT: content ============ -->
+      <main class="content" id="main">
+        <!-- WORK -->
+        <section class="sec" id="work">
+          <h2 class="sec-t rv"><a href="#work"><span class="n">01</span>Work</a></h2>
 
-      <!-- WORK -->
-      <section class="sec wrap" id="work">
-        <header class="sec-h rv">
-          <span class="num">01</span>
-          <h2>Selected work</h2>
-        </header>
-
-        <article class="feature">
-          <div class="feature-media rv">
-            <button
-              class="shot shot-main tilt"
-              type="button"
-              data-img="img/mp-home.jpg"
-              data-title="Home: categories and featured items"
-            >
-              <img
-                src="img/mp-home.jpg"
-                alt="Campus Marketplace home page with categories and featured items"
-              />
-            </button>
-            <div class="thumbs">
+          <article class="feature rv">
+            <div class="feature-media">
               <button
-                class="shot"
+                class="shot shot-main tilt"
                 type="button"
-                data-img="img/mp-item.jpg"
-                data-title="Item details with seller info and messaging"
+                data-img="img/mp-home.jpg"
+                data-title="Home: categories and featured items"
               >
                 <img
-                  src="img/mp-item.jpg"
-                  alt="Item details with seller info and messaging"
-                  loading="lazy"
+                  src="img/mp-home.jpg"
+                  alt="Campus Marketplace home page with categories and featured items"
                 />
               </button>
-              <button
-                class="shot"
-                type="button"
-                data-img="img/mp-post-review.jpg"
-                data-title="Post an item: review step of the listing flow"
-              >
-                <img
-                  src="img/mp-post-review.jpg"
-                  alt="Post an item: review step of the listing flow"
-                  loading="lazy"
-                />
-              </button>
-              <button
-                class="shot"
-                type="button"
-                data-img="img/mp-submitted.jpg"
-                data-title="Listings are submitted for admin review"
-              >
-                <img
-                  src="img/mp-submitted.jpg"
-                  alt="Listings are submitted for admin review"
-                  loading="lazy"
-                />
-              </button>
+              <div class="thumbs">
+                <button
+                  class="shot"
+                  type="button"
+                  data-img="img/mp-item.jpg"
+                  data-title="Item details with seller info and messaging"
+                >
+                  <img
+                    src="img/mp-item.jpg"
+                    alt="Item details with seller info and messaging"
+                    loading="lazy"
+                  />
+                </button>
+                <button
+                  class="shot"
+                  type="button"
+                  data-img="img/mp-post-review.jpg"
+                  data-title="Post an item: review step of the listing flow"
+                >
+                  <img
+                    src="img/mp-post-review.jpg"
+                    alt="Post an item: review step of the listing flow"
+                    loading="lazy"
+                  />
+                </button>
+                <button
+                  class="shot"
+                  type="button"
+                  data-img="img/mp-submitted.jpg"
+                  data-title="Listings are submitted for admin review"
+                >
+                  <img
+                    src="img/mp-submitted.jpg"
+                    alt="Listings are submitted for admin review"
+                    loading="lazy"
+                  />
+                </button>
+              </div>
             </div>
-          </div>
 
-          <div class="feature-body rv">
-            <div class="meta">
-              <span class="live"><i></i>Live</span>
-              <span>2026</span>
-              <span>Full-stack</span>
+            <div class="feature-body">
+              <div class="meta">
+                <span class="live"><i></i>Live</span><span>2026</span
+                ><span>Full-stack</span>
+              </div>
+              <h3>NORSU Campus Marketplace</h3>
+              <p>
+                A marketplace where students buy, sell and message each other
+                on campus. Plain HTML, CSS and JavaScript on a small PHP 8 JSON
+                API and MySQL, with no frameworks or build step.
+              </p>
+              <ul class="feats">
+                <li>Listings with photo uploads</li>
+                <li>Student messaging</li>
+                <li>Admin-reviewed posting</li>
+                <li>Admin dashboard</li>
+                <li>Campus map</li>
+                <li>Light and dark mode</li>
+              </ul>
+              <p class="stackline">PHP 8 · MySQL · JavaScript · HTML · CSS</p>
+              <div class="acts">
+                <a
+                  class="btn p"
+                  href="https://norsumarketplace.store"
+                  target="_blank"
+                  rel="noopener"
+                  >Visit live site
+                  <svg class="ico go" aria-hidden="true">
+                    <use href="#i-arrow" /></svg
+                ></a>
+                <a
+                  class="btn"
+                  href="https://github.com/shincodez/Campus-Marketplace"
+                  target="_blank"
+                  rel="noopener"
+                  ><svg class="ico" aria-hidden="true">
+                    <use href="#i-github" /></svg
+                  >Source</a
+                >
+              </div>
             </div>
-            <h3>NORSU Campus Marketplace</h3>
-            <p>
-              A web marketplace where students buy, sell and message each other
-              on campus. Built without frameworks or a build step: plain HTML,
-              CSS and JavaScript talking to a small PHP 8 JSON API and a
-              MySQL/MariaDB database.
-            </p>
-            <ul class="list">
-              <li>Browse, post and favorite listings with photo uploads</li>
-              <li>Student-to-student messaging and profiles</li>
-              <li>Four-step post flow with admin review before going live</li>
-              <li>Admin dashboard for users, listings and categories</li>
-              <li>Campus map, light and dark mode</li>
-              <li>Deployed on its own domain over HTTPS</li>
-            </ul>
-            <p class="stackline">
-              HTML · CSS · JavaScript · PHP 8 · MySQL · JSON API
-            </p>
-            <div class="acts">
-              <a
-                class="btn p"
-                href="https://norsumarketplace.store"
-                target="_blank"
-                rel="noopener"
-                >Visit live site
-                <svg class="ico go" aria-hidden="true"><use href="#i-arrow" /></svg
-              ></a>
-              <a
-                class="btn"
-                href="https://github.com/shincodez/Campus-Marketplace"
-                target="_blank"
-                rel="noopener"
-                ><svg class="ico" aria-hidden="true"><use href="#i-github" /></svg
-                >Source</a
-              >
-            </div>
-          </div>
-        </article>
+          </article>
 
-        <ul class="rows">
-          <li class="rv">
-            <a class="row" href="#">
-              <span class="row-t">TaskFlow</span>
-              <span class="row-d"
-                >Drag-and-drop to-do board with categories and due dates.</span
-              >
-              <span class="row-s">React · Firebase</span>
-              <svg class="ico row-a" aria-hidden="true"><use href="#i-arrow" /></svg>
-            </a>
-          </li>
-          <li class="rv">
-            <a class="row" href="#">
-              <span class="row-t">WeatherNow</span>
-              <span class="row-d"
-                >Live forecast dashboard with city search and a 5-day
-                outlook.</span
-              >
-              <span class="row-s">JavaScript · API</span>
-              <svg class="ico row-a" aria-hidden="true"><use href="#i-arrow" /></svg>
-            </a>
-          </li>
-        </ul>
-      </section>
+          <ul class="rows">
+            <li class="rv">
+              <a class="row" href="#">
+                <span class="row-t">TaskFlow</span>
+                <span class="row-d">Drag-and-drop to-do board</span>
+                <span class="row-s">React · Firebase</span>
+                <svg class="ico row-a" aria-hidden="true">
+                  <use href="#i-arrow" />
+                </svg>
+              </a>
+            </li>
+            <li class="rv">
+              <a class="row" href="#">
+                <span class="row-t">WeatherNow</span>
+                <span class="row-d">Forecast dashboard with city search</span>
+                <span class="row-s">JavaScript · API</span>
+                <svg class="ico row-a" aria-hidden="true">
+                  <use href="#i-arrow" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </section>
 
-      <!-- ABOUT -->
-      <section class="sec wrap" id="about">
-        <header class="sec-h rv">
-          <span class="num">02</span>
-          <h2>About</h2>
-        </header>
-        <div class="about">
-          <div class="about-txt rv">
-            <p class="big-p">
-              Hey, Shane here. I’m a Computer Science student at Negros Oriental
-              State University who learns best by building. Focused on clean
-              architecture, strong fundamentals, and shipping complete
-              projects.
-            </p>
-            <p>
-              Actively seeking internship opportunities in software
-              development. Driven to solve real-world technical problems and
-              ship clean, maintainable code.
-            </p>
-            <h3 class="sub">Currently learning</h3>
-            <p class="stackline">TypeScript · Next.js · Data Structures</p>
-          </div>
+        <!-- STACK -->
+        <section class="sec" id="stack">
+          <h2 class="sec-t rv"><a href="#stack"><span class="n">02</span>Stack</a></h2>
           <div class="stack rv">
-            <h3 class="sub">Tech stack</h3>
               <div class="tcat">
                 <h4 class="tch">
                   <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -449,191 +461,162 @@
                 </div>
               </div>
             
+            <div class="tcat">
+              <h4 class="tch">Learning</h4>
+              <div class="tcs">
+                <span class="tc soft">TypeScript</span
+                ><span class="tc soft">Next.js</span
+                ><span class="tc soft">Data Structures</span>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- CERTIFICATES -->
-      <section class="sec wrap" id="certs">
-        <header class="sec-h rv">
-          <span class="num">03</span>
-          <h2>Certificates</h2>
-        </header>
-        <div class="cert-grid">
-          <button
-            class="certc rv"
-            type="button"
-            data-img="certs/ai-youth.jpg"
-            data-pdf="certs/ai-youth.pdf"
-            data-title="AI Ready ASEAN — Youth AI Modules"
-            data-desc="ASEAN Foundation · Completed Aug 25, 2026 · All 15 modules (12 hours) covering generative AI, AI ethics, prompting and building simple AI tools."
-          >
-            <span class="cert-img"
-              ><img
-                src="certs/ai-youth.jpg"
-                alt="AI Ready ASEAN certificate"
-                loading="lazy"
-            /></span>
-            <span class="cert-k">Completion · Aug 2026</span>
-            <span class="cert-t">AI Ready ASEAN — Youth</span>
-            <span class="cert-o">ASEAN Foundation</span>
-          </button>
-          <button
-            class="certc rv"
-            type="button"
-            data-img="certs/gamedev-session1.jpg"
-            data-pdf="certs/gamedev-session1.pdf"
-            data-title="Being a Hobbyist Game Dev in the Modern Era"
-            data-desc="DICT Region VIII · PRESS START: Game Development in Region 8, Session 1 · Aug 17, 2026."
-          >
-            <span class="cert-img"
-              ><img
-                src="certs/gamedev-session1.jpg"
-                alt="Game dev session 1 certificate"
-                loading="lazy"
-            /></span>
-            <span class="cert-k">Participation · Aug 17, 2026</span>
-            <span class="cert-t">Hobbyist Game Dev</span>
-            <span class="cert-o">DICT Region VIII</span>
-          </button>
-          <button
-            class="certc rv"
-            type="button"
-            data-img="certs/gamedev-session2.jpg"
-            data-pdf="certs/gamedev-session2.pdf"
-            data-title="Failing, Learning, Creating: The Indie Journey"
-            data-desc="DICT Region VIII · PRESS START: Game Development in Region 8, Session 2 · Aug 27, 2026."
-          >
-            <span class="cert-img"
-              ><img
-                src="certs/gamedev-session2.jpg"
-                alt="Game dev session 2 certificate"
-                loading="lazy"
-            /></span>
-            <span class="cert-k">Participation · Aug 27, 2026</span>
-            <span class="cert-t">The Indie Journey</span>
-            <span class="cert-o">DICT Region VIII</span>
-          </button>
-        </div>
-      </section>
-
-      <!-- EXPERIENCE -->
-      <section class="sec wrap" id="experience">
-        <header class="sec-h rv">
-          <span class="num">04</span>
-          <h2>Experience</h2>
-        </header>
-        <ol class="tl">
-          <li class="rv">
-            <span class="when">2026</span>
-            <div>
-              <h3>Campus Marketplace goes live</h3>
-              <p>
-                Deployed my campus marketplace to norsumarketplace.store for
-                students to use.
-              </p>
-            </div>
-          </li>
-          <li class="rv">
-            <span class="when">2026</span>
-            <div>
-              <h3>PRESS START Game Dev series · DICT VIII</h3>
-              <p>
-                Attended two webinar sessions on starting out and sustaining an
-                indie game dev path.
-              </p>
-            </div>
-          </li>
-          <li class="rv">
-            <span class="when">2026</span>
-            <div>
-              <h3>AI Ready ASEAN · Youth</h3>
-              <p>Finished the full 15-module AI literacy track.</p>
-            </div>
-          </li>
-          <li class="rv">
-            <span class="when">2025 — Now</span>
-            <div>
-              <h3>University Coding Club</h3>
-              <p>Placeholder: help first-years with Git and JavaScript.</p>
-            </div>
-          </li>
-          <li class="rv">
-            <span class="when">2023 — Now</span>
-            <div>
-              <h3>B.S. Computer Science · Negros Oriental State University</h3>
-              <p>
-                Data structures, databases, web development, software
-                engineering.
-              </p>
-            </div>
-          </li>
-        </ol>
-      </section>
-
-      <!-- CONTACT -->
-      <section class="sec wrap contact" id="contact">
-        <header class="sec-h rv">
-          <span class="num">05</span>
-          <h2>Contact</h2>
-        </header>
-        <p class="cta-line rv">
-          Looking for an intern who <em>ships</em>? Let’s talk.
-        </p>
-        <a class="mail rv" href="mailto:s19571732@gmail.com"
-          >s19571732@gmail.com
-          <svg class="ico go" aria-hidden="true"><use href="#i-arrow" /></svg
-        ></a>
-        <div class="contact-grid">
-          <div class="rv">
-            <h3 class="sub">What I’m looking for</h3>
-            <ul class="list">
-              <li>Internship or OJT in web or software development</li>
-              <li>A team that mentors and reviews my code</li>
-              <li>Remote or on-site in Central Visayas</li>
-              <li>Available Summer 2027, flexible hours during school</li>
-            </ul>
+        <!-- CERTIFICATES -->
+        <section class="sec" id="certs">
+          <h2 class="sec-t rv"><a href="#certs"><span class="n">03</span>Certificates</a></h2>
+          <div class="cert-grid">
+            <button
+              class="certc rv"
+              type="button"
+              data-img="certs/ai-youth.jpg"
+              data-pdf="certs/ai-youth.pdf"
+              data-title="AI Ready ASEAN — Youth AI Modules"
+              data-desc="ASEAN Foundation · Completed Aug 25, 2026 · All 15 modules (12 hours) covering generative AI, AI ethics, prompting and building simple AI tools."
+            >
+              <span class="cert-img"
+                ><img
+                  src="certs/ai-youth.jpg"
+                  alt="AI Ready ASEAN certificate"
+                  loading="lazy"
+              /></span>
+              <span class="cert-t">AI Ready ASEAN — Youth</span>
+              <span class="cert-k">ASEAN Foundation · Aug 2026</span>
+            </button>
+            <button
+              class="certc rv"
+              type="button"
+              data-img="certs/gamedev-session1.jpg"
+              data-pdf="certs/gamedev-session1.pdf"
+              data-title="Being a Hobbyist Game Dev in the Modern Era"
+              data-desc="DICT Region VIII · PRESS START: Game Development in Region 8, Session 1 · Aug 17, 2026."
+            >
+              <span class="cert-img"
+                ><img
+                  src="certs/gamedev-session1.jpg"
+                  alt="Game dev session 1 certificate"
+                  loading="lazy"
+              /></span>
+              <span class="cert-t">Hobbyist Game Dev</span>
+              <span class="cert-k">DICT Region VIII · Aug 2026</span>
+            </button>
+            <button
+              class="certc rv"
+              type="button"
+              data-img="certs/gamedev-session2.jpg"
+              data-pdf="certs/gamedev-session2.pdf"
+              data-title="Failing, Learning, Creating: The Indie Journey"
+              data-desc="DICT Region VIII · PRESS START: Game Development in Region 8, Session 2 · Aug 27, 2026."
+            >
+              <span class="cert-img"
+                ><img
+                  src="certs/gamedev-session2.jpg"
+                  alt="Game dev session 2 certificate"
+                  loading="lazy"
+              /></span>
+              <span class="cert-t">The Indie Journey</span>
+              <span class="cert-k">DICT Region VIII · Aug 2026</span>
+            </button>
           </div>
-          <div class="rv">
-            <h3 class="sub">What I bring</h3>
-            <ul class="list">
-              <li>Fast learner who asks good questions</li>
-              <li>Clean, commented code and tidy Git history</li>
-              <li>Reliable communication and deadlines</li>
-            </ul>
-          </div>
-          <div class="rv">
-            <h3 class="sub">Elsewhere</h3>
-            <ul class="soc">
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/shanefrancistaclob"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><svg class="ico" aria-hidden="true">
-                    <use href="#i-linkedin" /></svg
-                  >LinkedIn</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://github.com/shincodez"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><svg class="ico" aria-hidden="true">
-                    <use href="#i-github" /></svg
-                  >GitHub</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-    </main>
+        </section>
 
-    <footer class="ft wrap">
-      <p>© 2026 Shane Francis B. Taclob. All rights reserved.</p>
-    </footer>
+        <!-- EXPERIENCE -->
+        <section class="sec" id="experience">
+          <h2 class="sec-t rv"><a href="#experience"><span class="n">04</span>Experience</a></h2>
+          <ol class="tl">
+            <li class="rv">
+              <span class="when">2026</span>
+              <div>
+                <h3>Campus Marketplace goes live</h3>
+                <p>Deployed to norsumarketplace.store for students to use.</p>
+              </div>
+            </li>
+            <li class="rv">
+              <span class="when">2026</span>
+              <div>
+                <h3>PRESS START Game Dev series · DICT VIII</h3>
+                <p>Two webinar sessions on starting an indie game dev path.</p>
+              </div>
+            </li>
+            <li class="rv">
+              <span class="when">2026</span>
+              <div>
+                <h3>AI Ready ASEAN · Youth</h3>
+                <p>Finished the full 15-module AI literacy track.</p>
+              </div>
+            </li>
+            <li class="rv">
+              <span class="when">2025 — Now</span>
+              <div>
+                <h3>University Coding Club</h3>
+                <p>Placeholder: help first-years with Git and JavaScript.</p>
+              </div>
+            </li>
+            <li class="rv">
+              <span class="when">2023 — Now</span>
+              <div>
+                <h3>B.S. Computer Science · NORSU</h3>
+                <p>
+                  Data structures, databases, web development, software
+                  engineering.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="sec" id="contact">
+          <h2 class="sec-t rv"><a href="#contact"><span class="n">05</span>Contact</a></h2>
+          <div class="contact rv">
+            <p class="cta-line">
+              Looking for an intern who <strong>ships</strong>? Let’s talk.
+            </p>
+            <p>
+              I’m after an internship or OJT in web or software development,
+              remote or on-site in Central Visayas, from Summer 2027. Usually
+              replies within a day.
+            </p>
+            <a class="mail" href="mailto:s19571732@gmail.com"
+              >s19571732@gmail.com
+              <svg class="ico" aria-hidden="true"><use href="#i-arrow" /></svg
+            ></a>
+            <div class="contact-grid">
+              <div>
+                <h4 class="sub">Looking for</h4>
+                <ul class="dots">
+                  <li>A team that mentors and reviews my code</li>
+                  <li>Remote or on-site in Central Visayas</li>
+                  <li>Flexible hours during school</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="sub">What I bring</h4>
+                <ul class="dots">
+                  <li>Fast learner who asks good questions</li>
+                  <li>Clean code and tidy Git history</li>
+                  <li>Reliable communication and deadlines</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="ft">
+          <p>© 2026 Shane Francis B. Taclob. All rights reserved.</p>
+        </footer>
+      </main>
+    </div>
 
     <div class="modal" id="cm" aria-hidden="true">
       <div class="mbox" role="dialog" aria-modal="true" aria-labelledby="mt">

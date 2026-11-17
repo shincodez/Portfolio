@@ -866,6 +866,12 @@ h3 {
   font-size: 13.5px;
   color: var(--mute);
 }
+.contact-grid .dots {
+  gap: 10px;
+}
+.contact-grid .dots li {
+  line-height: 1.55;
+}
 
 /* ---------- footer ---------- */
 .ft {

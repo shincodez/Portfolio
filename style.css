@@ -128,14 +128,25 @@ em {
   gap: 12px;
   margin-bottom: 26px;
 }
+/* pill keeps the pinging dot inset, so .side's overflow can't clip it */
 .status {
   display: inline-flex;
   align-items: center;
   gap: 9px;
   margin: 0;
+  padding: 6px 13px 6px 12px;
   font-size: 12.5px;
-  font-weight: 500;
-  color: var(--mute);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--ink);
+  background: color-mix(in srgb, var(--live) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--live) 35%, transparent);
+  border-radius: 999px;
+}
+p.status i {
+  width: 8px;
+  height: 8px;
+  box-shadow: 0 0 8px color-mix(in srgb, var(--live) 70%, transparent);
 }
 .status i,
 .live i {

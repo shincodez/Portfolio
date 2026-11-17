@@ -50,6 +50,10 @@
     />
     <script>
       document.documentElement.classList.add("js");
+      /* if script.js never runs (blocked, failed, very slow), un-hide the content */
+      setTimeout(function () {
+        if (!window.siteReady) document.documentElement.classList.remove("js");
+      }, 3000);
       try {
         var t = localStorage.getItem("theme");
         if (!t)

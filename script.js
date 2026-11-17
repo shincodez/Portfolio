@@ -1,4 +1,5 @@
 (function () {
+  window.siteReady = true;
   var root = document.documentElement,
     $ = function (id) {
       return document.getElementById(id);
@@ -189,9 +190,26 @@
   };
 
   /* modals: certificate viewer + screenshot lightbox */
-  var lastFocus = null;
+  var lastFocus = null,
+    behind = qa(".skip, .layout");
+  function setBehind(off) {
+    behind.forEach(function (el) {
+      el.inert = off;
+    });
+  }
+  /* swap a viewer image without showing the previous one while loading */
+  function showImg(im, src, alt) {
+    if (im.getAttribute("src") === src) return;
+    im.classList.add("ld");
+    im.onload = im.onerror = function () {
+      im.classList.remove("ld");
+    };
+    im.alt = alt;
+    im.src = src;
+  }
   function openModal(m) {
     if (!m.classList.contains("open")) lastFocus = document.activeElement;
+    setBehind(true);
     m.classList.add("open");
     m.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
@@ -201,6 +219,7 @@
     m.classList.remove("open");
     m.setAttribute("aria-hidden", "true");
     document.body.style.overflow = "";
+    setBehind(false);
     if (lastFocus) lastFocus.focus({ preventScroll: true });
   }
 
@@ -243,8 +262,7 @@
       im = $("mi");
     $("mt").textContent = b.dataset.title;
     $("md").textContent = b.dataset.desc;
-    im.src = b.dataset.img;
-    im.alt = b.dataset.title;
+    showImg(im, b.dataset.img, b.dataset.title);
     $("mp").href = b.dataset.pdf || b.dataset.img;
     $("mpl").textContent = b.dataset.pdf ? "Open PDF" : "Open image";
     openModal(cm);
@@ -272,8 +290,7 @@
     var b = shots[si],
       im = $("lbi");
     $("lbt").textContent = b.dataset.title;
-    im.src = b.dataset.img;
-    im.alt = b.dataset.title;
+    showImg(im, b.dataset.img, b.dataset.title);
     openModal(lb);
   }
   shots.forEach(function (b, i) {

@@ -5,8 +5,8 @@
   --bg: #fafaf8;
   --surface: #f1f0ec;
   --ink: #121212;
-  --mute: #66665f;
-  --faint: #a3a29b;
+  --mute: #56564f;
+  --faint: #73726b;
   --line: #e6e4de;
   --live: #16a34a;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
@@ -17,8 +17,8 @@
   --bg: #0c0c0b;
   --surface: #171715;
   --ink: #f1f0ec;
-  --mute: #9b9a93;
-  --faint: #5f5e58;
+  --mute: #a8a7a0;
+  --faint: #83827b;
   --line: #24241f;
   --live: #3ddc84;
   color-scheme: dark;
@@ -918,6 +918,10 @@ h3 {
 .modal.open {
   opacity: 1;
   visibility: visible;
+  /* become visible at once so the close button can take focus */
+  transition:
+    opacity 0.35s var(--ease),
+    visibility 0s;
 }
 .mbox {
   position: relative;
@@ -945,11 +949,15 @@ h3 {
 }
 .mbox img {
   display: block;
+  transition: opacity 0.25s;
   width: 100%;
   height: auto;
   border-radius: 10px;
   border: 1px solid var(--line);
   margin: 12px 0 16px;
+}
+.mbox img.ld {
+  opacity: 0;
 }
 #lbi {
   width: auto;

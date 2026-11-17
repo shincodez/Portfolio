@@ -117,6 +117,8 @@
           <path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1" />
         </g>
       </symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
       <symbol id="i-mail" viewBox="0 0 24 24">
         <g
           fill="none"
@@ -218,7 +220,13 @@
             projects, like a campus marketplace that’s now live.
           </p>
           <p class="here rv">
-            Siquijor, PH<span class="clock" id="clock" hidden></span>
+            <span class="here-i"
+              ><svg class="ico" aria-hidden="true"><use href="#i-pin" /></svg
+              >Siquijor, PH</span
+            ><span class="here-i" id="clockw" hidden
+              ><svg class="ico" aria-hidden="true"><use href="#i-clock" /></svg
+              ><span id="clock"></span
+            ></span>
           </p>
         </div>
 
@@ -731,13 +739,6 @@
               <div>
                 <h3>AI Ready ASEAN · Youth</h3>
                 <p>Finished the full 15-module AI literacy track.</p>
-              </div>
-            </li>
-            <li class="rv">
-              <span class="when">2025 — Now</span>
-              <div>
-                <h3>University Coding Club</h3>
-                <p>Placeholder: help first-years with Git and JavaScript.</p>
               </div>
             </li>
             <li class="rv">

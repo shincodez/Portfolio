@@ -56,7 +56,7 @@
       clock.textContent = fmt.format(new Date()) + " local time";
     };
     tick();
-    clock.hidden = false;
+    $("clockw").hidden = false;
     setInterval(tick, 30000);
   } catch (e) {}
 

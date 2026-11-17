@@ -204,6 +204,36 @@
     if (lastFocus) lastFocus.focus({ preventScroll: true });
   }
 
+  /* certificates: show the first four, toggle the rest */
+  var cgrid = $("cgrid"),
+    cmore = $("cmore"),
+    extra = qa(".certc", cgrid).slice(4);
+  if (extra.length) {
+    var moreText = "Show " + extra.length + " more";
+    $("cmorel").textContent = moreText;
+    cmore.hidden = false;
+    extra.forEach(function (el, i) {
+      el.style.setProperty("--d", i * 0.07 + "s");
+    });
+    cmore.onclick = function () {
+      var open = cgrid.classList.toggle("clip") === false;
+      cmore.setAttribute("aria-expanded", open);
+      $("cmorel").textContent = open ? "Show less" : moreText;
+      if (open) {
+        /* mobile strip: slide to the first newly shown card */
+        if (cgrid.scrollWidth > cgrid.clientWidth)
+          cgrid.scrollTo({
+            left: extra[0].offsetLeft - qa(".certc", cgrid)[0].offsetLeft,
+            behavior: reduce ? "auto" : "smooth",
+          });
+      } else
+        $("certs").scrollIntoView({
+          behavior: reduce ? "auto" : "smooth",
+          block: "start",
+        });
+    };
+  } else cgrid.classList.remove("clip");
+
   var cm = $("cm"),
     certs = qa(".certc"),
     ci = 0;
@@ -215,7 +245,8 @@
     $("md").textContent = b.dataset.desc;
     im.src = b.dataset.img;
     im.alt = b.dataset.title;
-    $("mp").href = b.dataset.pdf;
+    $("mp").href = b.dataset.pdf || b.dataset.img;
+    $("mpl").textContent = b.dataset.pdf ? "Open PDF" : "Open image";
     openModal(cm);
   }
   certs.forEach(function (b, i) {

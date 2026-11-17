@@ -126,7 +126,7 @@
             I’m a Computer Science student at Negros Oriental State University
             interested in artificial intelligence (AI), web development and
             software development. I build full-stack web apps with JavaScript,
-            PHP and MySQL, and I’m exploring AI and machine learning. I focus on
+            PHP and MySQL and I focus on
             clean code and shipping complete projects, like a campus
             marketplace that’s now live.
           </p>
@@ -478,12 +478,60 @@
         <!-- CERTIFICATES -->
         <section class="sec" id="certs">
           <h2 class="sec-t rv"><a href="#certs"><span class="n">03</span>Certificates</a></h2>
-          <div class="cert-grid">
+          <div class="cert-grid clip" id="cgrid">
+            <button
+              class="certc rv"
+              type="button"
+              data-img="certs/ai-ml-webinar.webp"
+              data-pdf="certs/ai-ml-webinar.pdf"
+              data-title="Artificial Intelligence &amp; Machine Learning"
+              data-desc="BS Computer Science Program, NORSU · Certificate of Participation · Webinar on artificial intelligence and machine learning · Oct 26, 2026."
+            >
+              <span class="cert-img"
+                ><img
+                  src="certs/ai-ml-webinar.webp"
+                  alt="Artificial Intelligence and Machine Learning certificate"
+                  loading="lazy"
+              /></span>
+              <span class="cert-t">AI &amp; Machine Learning</span>
+              <span class="cert-k">BSCS · NORSU · Oct 2026</span>
+            </button>
+            <button
+              class="certc rv"
+              type="button"
+              data-img="certs/digital-minds-day1.webp"
+              data-title="Digital Minds — Beyond the Prompt &amp; Think Before You Click"
+              data-desc="RUBIO KINECT · Gordon College CCS · Certificate of Completion · Understanding AI and making it work for you; recognizing threats and protecting yourself online · Oct 19, 2026."
+            >
+              <span class="cert-img"
+                ><img
+                  src="certs/digital-minds-day1.webp"
+                  alt="Digital Minds day 1 certificate"
+                  loading="lazy"
+              /></span>
+              <span class="cert-t">Digital Minds: AI &amp; Security</span>
+              <span class="cert-k">RUBIO KINECT · Oct 2026</span>
+            </button>
+            <button
+              class="certc rv"
+              type="button"
+              data-img="certs/digital-minds-day2.webp"
+              data-title="Digital Minds — Work Smarter &amp; Online Presence"
+              data-desc="RUBIO KINECT · Gordon College CCS · Certificate of Completion · Building your everyday digital toolkit; managing what you share, leave behind and represent online · Oct 20, 2026."
+            >
+              <span class="cert-img"
+                ><img
+                  src="certs/digital-minds-day2.webp"
+                  alt="Digital Minds day 2 certificate"
+                  loading="lazy"
+              /></span>
+              <span class="cert-t">Digital Minds: Digital Toolkit</span>
+              <span class="cert-k">RUBIO KINECT · Oct 2026</span>
+            </button>
             <button
               class="certc rv"
               type="button"
               data-img="certs/csit-emerging-trends.webp"
-              data-pdf="certs/csit-emerging-trends.pdf"
               data-title="Industry and Emerging Trends"
               data-desc="CSIT Department, NORSU Main · Certificate of Participation · CSIT webinar on current industry developments and emerging technologies · Oct 12, 2026."
             >
@@ -548,6 +596,10 @@
               <span class="cert-k">DICT Region VIII · Aug 2026</span>
             </button>
           </div>
+          <button class="btn cert-more" id="cmore" type="button" aria-controls="cgrid" aria-expanded="false" hidden>
+            <span id="cmorel">Show more</span>
+            <svg class="ico chev" aria-hidden="true" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></svg>
+          </button>
         </section>
 
         <!-- EXPERIENCE -->
@@ -668,7 +720,7 @@
           <button class="btn" id="mv" type="button" aria-label="Previous certificate">
             ← Prev</button
           ><a class="btn p" id="mp" href="#" target="_blank" rel="noopener"
-            >Open PDF
+            ><span id="mpl">Open PDF</span>
             <svg class="ico go" aria-hidden="true"><use href="#i-arrow" /></svg></a
           ><button class="btn" id="mn" type="button" aria-label="Next certificate">
             Next →

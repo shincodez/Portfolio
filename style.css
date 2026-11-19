@@ -546,6 +546,11 @@ h3 {
 }
 
 /* ---------- work ---------- */
+.feature + .feature {
+  margin-top: 56px;
+  padding-top: 56px;
+  border-top: 1px solid var(--line);
+}
 .feature-media {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 0.3fr);
@@ -649,6 +654,57 @@ h3 {
 }
 .feature-body .stackline {
   margin-bottom: 18px;
+}
+/* short development note under the stack line */
+.feature-body .stackline:has(+ .devnote) {
+  margin-bottom: 6px;
+}
+.feature-body > p.devnote {
+  font-size: 12.5px;
+  color: var(--faint);
+  margin-bottom: 18px;
+}
+
+/* case study: button sits beside "Visit live site", panel opens below */
+.case-btn .chev {
+  transition: transform 0.45s var(--ease);
+}
+.case-btn[aria-expanded="true"] .chev {
+  transform: rotate(180deg);
+}
+.case-btn .case-close,
+.case-btn[aria-expanded="true"] .case-open {
+  display: none;
+}
+.case-btn[aria-expanded="true"] .case-close {
+  display: inline;
+}
+.case-body[hidden] {
+  display: none;
+}
+.case-body {
+  margin-top: 18px;
+  padding-top: 4px;
+  border-top: 1px solid var(--line);
+}
+.case-body h4 {
+  margin: 18px 0 6px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+.case-body p {
+  font-size: 14.5px;
+  margin: 0 0 10px;
+}
+.case-body strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+.case-body .dots {
+  margin: 0 0 10px;
 }
 
 /* ---------- stack ---------- */

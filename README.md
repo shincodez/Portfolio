@@ -8,7 +8,7 @@ Personal portfolio of **Shane Francis B. Taclob**, a Computer Science student at
 
 ## What's inside
 
-- **Projects**: NORSU Campus Marketplace, with a screenshot gallery and a link to the live site
+- **Projects**: NORSU Campus Marketplace and Shallene’s Printing Shop, each with a screenshot gallery and a link to the live site
 - **Stack**: languages, frameworks and tools I use
 - **Certificates**: webinar and course certificates, with a viewer and PDF downloads
 - **Experience**: a short timeline

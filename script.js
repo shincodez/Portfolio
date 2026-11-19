@@ -223,6 +223,17 @@
     if (lastFocus) lastFocus.focus({ preventScroll: true });
   }
 
+  /* project case studies: button beside "Visit live site" opens the panel below */
+  qa(".case-btn").forEach(function (b) {
+    var panel = $(b.getAttribute("aria-controls"));
+    panel.hidden = true; /* stays readable if this script never runs */
+    b.onclick = function () {
+      var open = panel.hidden;
+      panel.hidden = !open;
+      b.setAttribute("aria-expanded", open);
+    };
+  });
+
   /* certificates: show the first four, toggle the rest */
   var cgrid = $("cgrid"),
     cmore = $("cmore"),
@@ -283,7 +294,7 @@
   };
 
   var lb = $("lb"),
-    shots = qa(".shot"),
+    shots = [],
     si = 0;
   function openL(i) {
     si = (i + shots.length) % shots.length;
@@ -293,10 +304,15 @@
     showImg(im, b.dataset.img, b.dataset.title);
     openModal(lb);
   }
-  shots.forEach(function (b, i) {
-    b.onclick = function () {
-      openL(i);
-    };
+  /* each project's screenshots form their own lightbox set */
+  qa(".feature-media").forEach(function (g) {
+    var set = Array.prototype.slice.call(g.querySelectorAll(".shot"));
+    set.forEach(function (b, i) {
+      b.onclick = function () {
+        shots = set;
+        openL(i);
+      };
+    });
   });
   $("lbc").onclick = function () {
     closeModal(lb);
